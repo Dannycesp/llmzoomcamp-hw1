@@ -1,5 +1,7 @@
 ## Homework: Introduction
 
+Solutions to the Datatalksclub LLM ZOOMCAMP homework 1 (intro) [Original Homework](https://github.com/DataTalksClub/llm-zoomcamp/blob/main/cohorts/2025/01-intro/homework.md)
+
 In this homework, we'll learn more about search and use Elastic Search for practice. 
 
 > It's possible that your answers won't match exactly. If it's the case, select the closest one.
@@ -96,12 +98,105 @@ Return 3 results. What's the 3rd question returned by the search engine?
 
 Now we're ready to build a prompt to send to an LLM. 
 
-Take the records returned from Elasticsearch in Q4 and use this template to build the context. Separate context entries by two linebreaks (`\n\n`)
-```python
-context_template = """
-Q: {question}
-A: {text}
-""".strip()
+Take the records returned from Elasticsearch in Q4 and use this te### June 2024 Pricing (per 1M tokens)
+- Input: $5.00 / 1M tokens
+- Output: $15.00 / 1M tokens
+
+For 1000 requests with 150 input and 250 output tokens each:
+```
+Total input tokens for 1000 requests: 150,000
+Total output tokens for 1000 requests: 250,000
+Cost for input tokens: 150,000 * ($5.00 / 1,000,000) = $0.75
+Cost for output tokens: 250,000 * ($15.00 / 1,000,000) = $3.75
+Total estimated cost for 1000 requests: $4.50
+```
+
+
+### Actual Cost Calculation (based on Q6 prompt and Q7 response)
+
+```
+PRICES AS OF JUNE 2024:
+
+Bonus Calculation (based on Q6 prompt and Q7 response):
+  Actual input tokens (Q6 prompt): 323
+  Actual output tokens (Q7 response): 93
+  Cost for actual input: $0.001615
+  Cost for actual output: $0.001395
+  Total cost for the single Q6/Q7 RAG call: $0.003010
+
+PRICES AS OF MAY 2025:### June 2024 Pricing (per 1M tokens)
+- Input: $5.00 / 1M tokens
+- Output: $15.00 / 1M tokens
+
+For 1000 requests with 150 input and 250 output tokens each:
+```
+Total input tokens for 1000 requests: 150,000
+Total output tokens for 1000 requests: 250,000
+Cost for input tokens: 150,000 * ($5.00 / 1,000,000) = $0.75
+Cost for output tokens: 250,000 * ($15.00 / 1,000,000) = $3.75
+Total estimated cost for 1000 requests: $4.50
+```
+
+
+### Actual Cost Calculation (based on Q6 prompt and Q7 response)
+
+```
+PRICES AS OF JUNE 2024:
+
+Bonus Calculation (based on Q6 prompt and Q7 response):
+  Actual input tokens (Q6 prompt): 323
+  Actual output tokens (Q7 response): 93
+  Cost for actual input: $0.001615
+  Cost for actual output: $0.001395
+  Total cost for the single Q6/Q7 RAG call: $0.003010
+
+PRICES AS OF MAY 2025:
+
+Bonus Calculation (based on Q6 prompt and Q7 response):
+  Actual input tokens (Q6 prompt): 323
+  Actual output tokens (Q7 response): 93
+  Cost for actual input: $0.000807500
+  Cost for actual output: $0.000930000
+  Total cost for the single Q6/Q7 RAG call: $0.001737500
+```
+
+## Bonus: generating the answer (ungraded)
+
+Let's send the prompt to OpenAI. What's the response?
+
+**Answer:**
+```
+To execute a command in a running Docker container, use the `docker exec` command. First, you can find the container ID by using `docker ps` to list all running containers. Then, execute your desired command in the container using the following syntax:
+
+docker exec -it <container-id> <command>
+
+For example, to open a bash shell, you would use:
+
+docker exec -it <container-id> bash
+```
+
+
+Bonus Calculation (based on Q6 prompt and Q7 response):
+  Actual input tokens (Q6 prompt): 323
+  Actual output tokens (Q7 response): 93
+  Cost for actual input: $0.000807500
+  Cost for actual output: $0.000930000
+  Total cost for the single Q6/Q7 RAG call: $0.001737500
+```
+
+## Bonus: generating the answer (ungraded)
+
+Let's send the prompt to OpenAI. What's the response?
+
+**Answer:**
+```
+To execute a command in a running Docker container, use the `docker exec` command. First, you can find the container ID by using `docker ps` to list all running containers. Then, execute your desired command in the container using the following syntax:
+
+docker exec -it <container-id> <command>
+
+For example, to open a bash shell, you would use:
+
+docker exec -it <container-id> bash
 ```
 
 Now use the context you just created along with the "How do I execute a command in a running docker container?" question 
@@ -173,7 +268,23 @@ docker exec -it <container-id> bash
 
 ## Bonus: Calculating the costs (ungraded)
 
-### June 2024 Pricing (per 1M tokens)
+
+## Bonus: calculating the costs (ungraded)
+
+### Cost for 1000 requests (June 2024 pricing)
+
+```
+Total input tokens for 1000 requests: 150000
+Total output tokens for 1000 requests: 250000
+Cost for input tokens: $0.75
+Cost for output tokens: $3.75
+Total estimated cost for 1000 requests: $4.50
+```
+
+### Actual Cost Calculation (June 2024)
+
+```
+PRICES AS OF JUNE 2024:### June 2024 Pricing (per 1M tokens)
 - Input: $5.00 / 1M tokens
 - Output: $15.00 / 1M tokens
 
@@ -186,37 +297,27 @@ Cost for output tokens: 250,000 * ($15.00 / 1,000,000) = $3.75
 Total estimated cost for 1000 requests: $4.50
 ```
 
-### May 2025 Pricing (per 1M tokens)
-- Input: $2.50 / 1M tokens
-- Output: $7.50 / 1M tokens
-
-For 1000 requests with 150 input and 250 output tokens each:
-```
-Total input tokens for 1000 requests: 150,000
-Total output tokens for 1000 requests: 250,000
-Cost for input tokens: 150,000 * ($2.50 / 1,000,000) = $0.375
-Cost for output tokens: 250,000 * ($7.50 / 1,000,000) = $1.875
-Total estimated cost for 1000 requests: $2.25
-```
 
 ### Actual Cost Calculation (based on Q6 prompt and Q7 response)
 
-#### June 2024 Pricing
 ```
-Actual input tokens (Q6 prompt): 323
-Actual output tokens (Q7 response): 85
-Cost for actual input: 323 * ($5.00 / 1,000,000) = $0.001615
-Cost for actual output: 85 * ($15.00 / 1,000,000) = $0.001275
-Total cost for the single Q6/Q7 RAG call: $0.00289
-```
+PRICES AS OF JUNE 2024:
 
-#### May 2025 Pricing
-```
-Actual input tokens (Q6 prompt): 323
-Actual output tokens (Q7 response): 85
-Cost for actual input: 323 * ($2.50 / 1,000,000) = $0.0008075
-Cost for actual output: 85 * ($7.50 / 1,000,000) = $0.0006375
-Total cost for the single Q6/Q7 RAG call: $0.001445
+Bonus Calculation (based on Q6 prompt and Q7 response):
+  Actual input tokens (Q6 prompt): 323
+  Actual output tokens (Q7 response): 93
+  Cost for actual input: $0.001615
+  Cost for actual output: $0.001395
+  Total cost for the single Q6/Q7 RAG call: $0.003010
+
+PRICES AS OF MAY 2025:
+
+Bonus Calculation (based on Q6 prompt and Q7 response):
+  Actual input tokens (Q6 prompt): 323
+  Actual output tokens (Q7 response): 93
+  Cost for actual input: $0.000807500
+  Cost for actual output: $0.000930000
+  Total cost for the single Q6/Q7 RAG call: $0.001737500
 ```
 
 ## Bonus: generating the answer (ungraded)
@@ -234,22 +335,6 @@ For example, to open a bash shell, you would use:
 docker exec -it <container-id> bash
 ```
 
-## Bonus: calculating the costs (ungraded)
-
-### Cost for 1000 requests (June 2024 pricing)
-
-```
-Total input tokens for 1000 requests: 150000
-Total output tokens for 1000 requests: 250000
-Cost for input tokens: $0.75
-Cost for output tokens: $3.75
-Total estimated cost for 1000 requests: $4.50
-```
-
-### Actual Cost Calculation (June 2024)
-
-```
-PRICES AS OF JUNE 2024:
 
 Bonus Calculation (based on Q6 prompt and Q7 response):
   Actual input tokens (Q6 prompt): 323
