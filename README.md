@@ -194,7 +194,7 @@ Cost for actual output: $0.001395
 Total cost for the single Q6/Q7 RAG call: $0.003010
 ```
 
-#### May 2025 Pricing (50% reduction):
+#### May 2025 Pricing:
 ```
 Actual input tokens (Q6 prompt): 323
 Actual output tokens (Q7 response): 93
