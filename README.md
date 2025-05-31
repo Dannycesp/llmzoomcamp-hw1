@@ -98,7 +98,7 @@ Return 3 results. What's the 3rd question returned by the search engine?
 
 Now we're ready to build a prompt to send to an LLM. 
 
-Take the records returned from Elasticsearch in Q4 and use this te### June 2024 Pricing (per 1M tokens)
+Take the records returned from Elasticsearch in Q4 and use this te### Cost Calculation (June 2024 Pricing)
 - Input: $5.00 / 1M tokens
 - Output: $15.00 / 1M tokens
 
@@ -111,86 +111,33 @@ Cost for output tokens: 250,000 * ($15.00 / 1,000,000) = $3.75
 Total estimated cost for 1000 requests: $4.50
 ```
 
+### Actual Cost for Q6/Q7 RAG Call
 
-### Actual Cost Calculation (based on Q6 prompt and Q7 response)
-
+#### June 2024 Pricing:
 ```
-PRICES AS OF JUNE 2024:
-
-Bonus Calculation (based on Q6 prompt and Q7 response):
-  Actual input tokens (Q6 prompt): 323
-  Actual output tokens (Q7 response): 93
-  Cost for actual input: $0.001615
-  Cost for actual output: $0.001395
-  Total cost for the single Q6/Q7 RAG call: $0.003010
-
-PRICES AS OF MAY 2025:### June 2024 Pricing (per 1M tokens)
-- Input: $5.00 / 1M tokens
-- Output: $15.00 / 1M tokens
-
-For 1000 requests with 150 input and 250 output tokens each:
-```
-Total input tokens for 1000 requests: 150,000
-Total output tokens for 1000 requests: 250,000
-Cost for input tokens: 150,000 * ($5.00 / 1,000,000) = $0.75
-Cost for output tokens: 250,000 * ($15.00 / 1,000,000) = $3.75
-Total estimated cost for 1000 requests: $4.50
+Actual input tokens (Q6 prompt): 323
+Actual output tokens (Q7 response): 93
+Cost for actual input: $0.001615
+Cost for actual output: $0.001395
+Total cost for the single Q6/Q7 RAG call: $0.003010
 ```
 
-
-### Actual Cost Calculation (based on Q6 prompt and Q7 response)
-
+#### May 2025 Pricing:
 ```
-PRICES AS OF JUNE 2024:
-
-Bonus Calculation (based on Q6 prompt and Q7 response):
-  Actual input tokens (Q6 prompt): 323
-  Actual output tokens (Q7 response): 93
-  Cost for actual input: $0.001615
-  Cost for actual output: $0.001395
-  Total cost for the single Q6/Q7 RAG call: $0.003010
-
-PRICES AS OF MAY 2025:
-
-Bonus Calculation (based on Q6 prompt and Q7 response):
-  Actual input tokens (Q6 prompt): 323
-  Actual output tokens (Q7 response): 93
-  Cost for actual input: $0.000807500
-  Cost for actual output: $0.000930000
-  Total cost for the single Q6/Q7 RAG call: $0.001737500
+Actual input tokens (Q6 prompt): 323
+Actual output tokens (Q7 response): 93
+Cost for actual input: $0.000808
+Cost for actual output: $0.000930
+Total cost for the single Q6/Q7 RAG call: $0.001738
 ```
 
-## Bonus: generating the answer (ungraded)
+## Bonus: Generating the Answer (ungraded)
 
 Let's send the prompt to OpenAI. What's the response?
 
 **Answer:**
 ```
-To execute a command in a running Docker container, use the `docker exec` command. First, you can find the container ID by using `docker ps` to list all running containers. Then, execute your desired command in the container using the following syntax:
-
-docker exec -it <container-id> <command>
-
-For example, to open a bash shell, you would use:
-
-docker exec -it <container-id> bash
-```
-
-
-Bonus Calculation (based on Q6 prompt and Q7 response):
-  Actual input tokens (Q6 prompt): 323
-  Actual output tokens (Q7 response): 93
-  Cost for actual input: $0.000807500
-  Cost for actual output: $0.000930000
-  Total cost for the single Q6/Q7 RAG call: $0.001737500
-```
-
-## Bonus: generating the answer (ungraded)
-
-Let's send the prompt to OpenAI. What's the response?
-
-**Answer:**
-```
-To execute a command in a running Docker container, use the `docker exec` command. First, you can find the container ID by using `docker ps` to list all running containers. Then, execute your desired command in the container using the following syntax:
+To execute a command in a running Docker container, use the `docker exec` command. First, find the container ID using `docker ps`, then execute the desired command using the following syntax:
 
 docker exec -it <container-id> <command>
 
@@ -301,5 +248,5 @@ Total cost for the single Q6/Q7 RAG call: $0.001738
 
 ## Submit the results
 
-* Submit your results here: https://courses.datatalks.club/llm-zoomcamp-2024/homework/hw1
+* Submit your results here: https://github.com/DataTalksClub/llm-zoomcamp/blob/main/cohorts/2025/01-intro/homework.md
 * It's possible that your answers won't match exactly. If it's the case, select the closest one.
