@@ -251,82 +251,13 @@ Note: to decode back a token into a word, you can use the `decode_single_token_b
 encoding.decode_single_token_bytes(63842)
 ```
 
-## Bonus: Generating the answer (ungraded)
+## Bonus: Generating the Answer (ungraded)
 
 Let's send the prompt to OpenAI. What's the response?
 
 **Answer:**
 ```
-To execute a command in a running Docker container, you can use the `docker exec` command. First, find the container ID using `docker ps`, then execute the desired command using the following syntax:
-
-docker exec -it <container-id> <your-command>
-
-For example, to open a bash session, you would use:
-
-docker exec -it <container-id> bash
-```
-
-## Bonus: Calculating the costs (ungraded)
-
-
-## Bonus: calculating the costs (ungraded)
-
-### Cost for 1000 requests (June 2024 pricing)
-
-```
-Total input tokens for 1000 requests: 150000
-Total output tokens for 1000 requests: 250000
-Cost for input tokens: $0.75
-Cost for output tokens: $3.75
-Total estimated cost for 1000 requests: $4.50
-```
-
-### Actual Cost Calculation (June 2024)
-
-```
-PRICES AS OF JUNE 2024:### June 2024 Pricing (per 1M tokens)
-- Input: $5.00 / 1M tokens
-- Output: $15.00 / 1M tokens
-
-For 1000 requests with 150 input and 250 output tokens each:
-```
-Total input tokens for 1000 requests: 150,000
-Total output tokens for 1000 requests: 250,000
-Cost for input tokens: 150,000 * ($5.00 / 1,000,000) = $0.75
-Cost for output tokens: 250,000 * ($15.00 / 1,000,000) = $3.75
-Total estimated cost for 1000 requests: $4.50
-```
-
-
-### Actual Cost Calculation (based on Q6 prompt and Q7 response)
-
-```
-PRICES AS OF JUNE 2024:
-
-Bonus Calculation (based on Q6 prompt and Q7 response):
-  Actual input tokens (Q6 prompt): 323
-  Actual output tokens (Q7 response): 93
-  Cost for actual input: $0.001615
-  Cost for actual output: $0.001395
-  Total cost for the single Q6/Q7 RAG call: $0.003010
-
-PRICES AS OF MAY 2025:
-
-Bonus Calculation (based on Q6 prompt and Q7 response):
-  Actual input tokens (Q6 prompt): 323
-  Actual output tokens (Q7 response): 93
-  Cost for actual input: $0.000807500
-  Cost for actual output: $0.000930000
-  Total cost for the single Q6/Q7 RAG call: $0.001737500
-```
-
-## Bonus: generating the answer (ungraded)
-
-Let's send the prompt to OpenAI. What's the response?
-
-**Answer:**
-```
-To execute a command in a running Docker container, use the `docker exec` command. First, you can find the container ID by using `docker ps` to list all running containers. Then, execute your desired command in the container using the following syntax:
+To execute a command in a running Docker container, use the `docker exec` command. First, find the container ID using `docker ps`, then execute the desired command using the following syntax:
 
 docker exec -it <container-id> <command>
 
@@ -335,26 +266,36 @@ For example, to open a bash shell, you would use:
 docker exec -it <container-id> bash
 ```
 
+## Bonus: Calculating the Costs (ungraded)
 
-Bonus Calculation (based on Q6 prompt and Q7 response):
-  Actual input tokens (Q6 prompt): 323
-  Actual output tokens (Q7 response): 93
-  Cost for actual input: $0.001615
-  Cost for actual output: $0.001395
-  Total cost for the single Q6/Q7 RAG call: $0.003010
-```
-
-### Actual Cost Calculation (May 2025)
+### Cost for 1000 Requests (June 2024 Pricing)
 
 ```
-PRICES AS OF MAY 2025:
+Total input tokens for 1000 requests: 150,000
+Total output tokens for 1000 requests: 250,000
+Cost for input tokens: $0.75
+Cost for output tokens: $3.75
+Total estimated cost for 1000 requests: $4.50
+```
 
-Bonus Calculation (based on Q6 prompt and Q7 response):
-  Actual input tokens (Q6 prompt): 323
-  Actual output tokens (Q7 response): 93
-  Cost for actual input: $0.000808
-  Cost for actual output: $0.000930
-  Total cost for the single Q6/Q7 RAG call: $0.001738
+### Actual Cost Calculation (Based on Q6 Prompt and Q7 Response)
+
+#### June 2024 Pricing
+```
+Actual input tokens (Q6 prompt): 323
+Actual output tokens (Q7 response): 93
+Cost for actual input: $0.001615
+Cost for actual output: $0.001395
+Total cost for the single Q6/Q7 RAG call: $0.003010
+```
+
+#### May 2025 Pricing
+```
+Actual input tokens (Q6 prompt): 323
+Actual output tokens (Q7 response): 93
+Cost for actual input: $0.000808
+Cost for actual output: $0.000930
+Total cost for the single Q6/Q7 RAG call: $0.001738
 ```
 
 
